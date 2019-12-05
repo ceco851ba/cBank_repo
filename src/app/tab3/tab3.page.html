@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-item>
+        <ion-title align="center" style="font-weight: bold; color:rgb(24, 0, 163);">   New Transaction  </ion-title>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <ion-content>
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+                <ion-label  color="danger" position="floating">Reciever ID</ion-label>
+                <ion-input placeholder="Required" type = "number" min="0" max="10"   [(ngModel)] = "receiverId" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label  color="danger" position="floating">Reciever IBAN</ion-label>
+                <ion-input placeholder="Reciever IBAN Required!" autocapitalize="characters" type = "text" min="15" max="32"   [(ngModel)] = "receiverIBAN" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label  color="danger" position="floating">Reciever Name</ion-label>
+                <ion-input type = "text" placeholder="Reciever Name Required!" [(ngModel)] = "receiverName" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label  color="primary" position="floating"> Message</ion-label>
+                <ion-input placeholder="Message (optional)" type = "text"  [(ngModel)] = "message" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="danger" position="floating"> Amount</ion-label>
+                <ion-input placeholder="Amount Required!" type = "number" min="0" max="1000"   [(ngModel)] = "amount" required min="0" max="1000"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label  color="primary" position="floating"> Transaction Category</ion-label>
+                <ion-input placeholder="Transaction Category (optional)" type = "text"  [(ngModel)] = "transactionCategory" ></ion-input>
+            </ion-item>
+          
+          </ion-card-content>
+        </ion-card>
+              
+              <ion-card>
+                <ion-button color="danger"  ion-button expand="block" (click)="CreateNewTransactionButtonOnclick()">Send Transaction</ion-button> 
+                <ion-button ion-button expand="block" (click)="gotoTransButtonOnclick()">Return to Transactins</ion-button> 
+                <ion-button ion-button expand="block" (click)="returnToProfileButtonOnclick()">Return to Profile</ion-button> 
+              </ion-card>
+            
+      </ion-content>
+
+

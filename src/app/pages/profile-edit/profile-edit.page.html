@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title align="center" style="font-weight: bold; color:rgb(24, 0, 163);">   Profile Details & Edit  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-icon name ="contact"></ion-icon>Profile Info
+        </ion-card-header>
+        <ion-card-content>
+        
+<ion-item>
+    <ion-label color="primary" floating>Title</ion-label>
+    <ion-input clearInput placeholder ="title"  [(ngModel)]="profile.userTitle" type = "text" ></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label color="primary" floating>Name</ion-label>
+    <ion-input clearInput placeholder ="Name"  value = '{{profile.userName}}' [(ngModel)]="profile.userName" type = "text" ></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label color="primary" floating>Surname</ion-label>
+    <ion-input clearInput placeholder ="Surname"  value = '{{profile.userSurname}}' [(ngModel)]="profile.userSurname" type = "text" ></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label color="primary" floating>Title 2</ion-label>
+    <ion-input clearInput placeholder ="phd" value = '{{profile.userTitle2}}' [(ngModel)]="profile.userTitle2" type = "text" ></ion-input>
+</ion-item>
+
+<ion-item>    
+        <ion-label color="primary" floating>Email</ion-label>
+    <ion-input type="email" clearInput placeholder ="email"  [(ngModel)]="profile.userEmail"  ></ion-input>   
+  </ion-item>
+
+  <ion-item>    
+      <ion-label color="primary" floating>Tel Number</ion-label>
+     <!--Tel Number is type string due to problem with numbers starting with 0 --> 
+  <ion-input type="string" clearInput placeholder ="0903123123"  [(ngModel)]="profile.userPhonenum"  ></ion-input>   
+</ion-item>
+
+<ion-item>    
+    <ion-label color="primary" floating>Address</ion-label>
+  
+<ion-input type="string" clearInput placeholder ="Address"  [(ngModel)]="profile.userAddress"  ></ion-input>   
+</ion-item>
+
+<ion-item>    
+    <ion-label color="primary" floating>City</ion-label>
+  
+<ion-input type="string" clearInput placeholder ="Bratisalva"  [(ngModel)]="profile.userCity"  ></ion-input>   
+</ion-item>
+
+
+</ion-card-content>
+</ion-card>
+     
+
+      <ion-card>     
+          <ion-button ion-button expand="block" (click)="saveValuesButtonOnclick()">save changes</ion-button> 
+          </ion-card>
+    <ion-card>     
+      <ion-button ion-button expand="block" (click)="returnToProfileButtonOnclick()">Go Back</ion-button> 
+      </ion-card>
+
+</ion-content>

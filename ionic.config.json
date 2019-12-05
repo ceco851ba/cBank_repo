@@ -1,0 +1,8 @@
+{
+  "name": "cBank",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

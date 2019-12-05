@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title align="center" style="font-weight: bold; color:rgb(24, 0, 163);">   Transaction Detail </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+      <ion-card-content *ngIf="SelectedTransaction">
+          <ion-item>
+              <ion-label color="primary" floating>Recipient</ion-label>
+            <ion-text> {{SelectedTransaction.receiverName}}</ion-text>
+          </ion-item>
+
+          <ion-item>
+              <ion-label color="primary" floating>Message</ion-label>
+            <ion-text> {{SelectedTransaction.message}}</ion-text>
+          </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Sender IBAN</ion-label>
+          <ion-text> {{SelectedTransaction.senderIBAN}}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Receiver IBAN</ion-label>
+            <ion-text>{{SelectedTransaction.receiverIBAN}}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Amount</ion-label>
+            <ion-text> {{SelectedTransaction.amount}}€</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Category</ion-label>
+          <ion-text>{{SelectedTransaction.transactionCategory}}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Date and time</ion-label>
+            <ion-text>{{dateAndTime}}</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-button ion-button expand="block" (click)="returnToTransactionButtonOnclick()">Back</ion-button> 
+  </ion-content>
+  

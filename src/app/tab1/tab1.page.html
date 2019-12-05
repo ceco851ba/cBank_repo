@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+        <ion-title align="center" style="font-weight: bold; color:rgb(24, 0, 163);">   My Account  </ion-title>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+          <ion-icon name ="contact"></ion-icon>Profile Info
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-row>
+             <ion-text>
+              Name: {{profile.userTitle}} {{profile.userName}} {{profile.userSurname}} {{profile.userTitle2}}
+            </ion-text>
+          </ion-row>
+        </ion-item>
+        <ion-item>
+            <ion-row>
+               <ion-text>
+                Email:  {{profile.userEmail}}
+              </ion-text>
+            </ion-row>
+          </ion-item>    
+           <ion-item>
+            <ion-row>
+               <ion-text>
+                Phone Number:  {{profile.userPhonenum}}
+              </ion-text>
+            </ion-row>
+          </ion-item>    
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+          <ion-icon name="card"></ion-icon>My Balance Details
+      </ion-card-header>
+      <ion-item>
+          <ion-text>
+            IBAN: {{profile.userIBAN}}
+          </ion-text>
+        </ion-item>
+      <ion-item>
+        <ion-text>
+          Balance: {{profile.userBalance}}€
+        </ion-text>
+      </ion-item>
+
+    </ion-card>
+    <ion-card>
+    <ion-button ion-button expand="block" (click)="usrEditButtonOnClick()">expand & edit profile</ion-button>   
+    <ion-button ion-button expand="block" (click)="gotoTransButtonOnclick()">Transactions</ion-button> 
+    <ion-button ion-button expand="block" (click)="gotoNewTransButtonOnclick()">Create New Transaction</ion-button> 
+  </ion-card>
+ 
+</ion-content>
